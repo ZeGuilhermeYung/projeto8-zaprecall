@@ -31,14 +31,7 @@ h3 {
   line-height: 19px;
   color: #333333;
 }
-h4, ::placeholder, select:invalid {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  color: #FB6B6B;
-  opacity: 0.9;
-}
-h5 {
+h4 {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
@@ -47,7 +40,7 @@ h5 {
   text-align: center;
   color: #FFFFFF;
 }
-h6 {
+h5 {
   font-size: 12px;
   line-height: 14px;
   text-align: center;
@@ -75,6 +68,14 @@ strong {
   height: 161px;
   margin-bottom: 21px;
 }
+select, input, ::placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FB6B6B;
+  opacity: 0.9;
+  padding-left: 11px;
+}
 select, input, option {
   width: 246px;
   height: 43px;
@@ -89,16 +90,12 @@ select {
 }
 ::placeholder, select:invalid {
   color: #ADADAD;
-  padding-left: 11px;
 }
 input:focus-visible, select:focus-visible {
   outline: -webkit-focus-ring-color auto 1px;
   outline-color: #ADADAD;
   outline-style: auto;
   outline-width: 1px;
-}
-select option:disabled {
-  color: red;
 }
 .start-button {
   width: 246px;
@@ -114,4 +111,19 @@ select option:disabled {
 }
 .start-button h2 {
   color: #D70900;
+}
+
+/*/////////////////// Game Screen /////////////*/
+
+header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header img {
+  width: 52px;
+  height: 60px;
+  margin-right: 20px;
 }
