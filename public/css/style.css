@@ -19,12 +19,6 @@ h1 {
   letter-spacing: -0.012em;
   color: #FFFFFF;
 }
-h2 {
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-  color: #333333;
-}
 h3 {
   font-weight: 700;
   font-size: 16px;
@@ -68,7 +62,10 @@ strong {
   height: 161px;
   margin-bottom: 21px;
 }
-select, input, ::placeholder {
+input {
+  all: unset;
+}
+select, input[type=number], ::placeholder {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 16px;
@@ -76,7 +73,7 @@ select, input, ::placeholder {
   opacity: 0.9;
   padding-left: 11px;
 }
-select, input, option {
+select, input[type=number], option {
   width: 246px;
   height: 43px;
   background-color: #FFFFFF;
@@ -91,27 +88,30 @@ select {
 ::placeholder, select:invalid {
   color: #ADADAD;
 }
-input:focus-visible, select:focus-visible {
+.first-screen input[type=number]:focus-visible, select:focus-visible {
   outline: -webkit-focus-ring-color auto 1px;
   outline-color: #ADADAD;
   outline-style: auto;
   outline-width: 1px;
 }
-.start-button {
+.first-screen input[type=submit] {
   width: 246px;
   height: 54px;
+  color: #D70900;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
   background-color: #FFFFFF;
   border: 1px solid #D70900;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
 }
-.start-button h2 {
-  color: #D70900;
-}
+
 
 /*/////////////////// Game Screen /////////////*/
 
