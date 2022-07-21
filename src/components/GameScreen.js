@@ -4,7 +4,7 @@ import Result from "./GameScreen/Result";
 
 export default function GameScreen() {
   return (
-    <section>
+    <section className="game-screen hidden">
       <Header />
       <Deck />
       <Result />
