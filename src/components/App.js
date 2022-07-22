@@ -42,8 +42,6 @@ export default function App() {
     ]
   };
 
-  const [deck, setDeck] = React.useState(initial);
-
   const decks = [
     {
       name:"Princípios de React",
@@ -121,10 +119,13 @@ export default function App() {
     }
   ];
 
+  const [deck, setDeck] = React.useState(initial);
+  const [classFirstScreen, setClassFirstScreen] = React.useState("first-screen");
+
   return (
     <div>
-      <FirstScreen decks={decks} deck={deck} setDeck={setDeck} />
-      <GameScreen decks={decks} deck={deck} setDeck={setDeck} />
+      <FirstScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} />
+      <GameScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} />
     </div>
   );
 }
