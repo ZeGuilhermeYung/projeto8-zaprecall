@@ -17,11 +17,9 @@ function Card (props) {
 }
 
 export default function Deck(props) {
-  if (props.deck !== "") {
     return (
       <main>
         {props.deck.qEa.map((pair, index) => <Card key={index} questionOrder={index + 1} question={pair.question} answer={pair.answer} />)}
       </main>
     );
-  }
 }
