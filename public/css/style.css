@@ -149,3 +149,9 @@ header img {
   border-radius: 5px;
   margin-bottom: 25px;
 }
+.card-question.hidden {
+  display: none;
+}
+.card-answer.hidden {
+  display: none;
+}

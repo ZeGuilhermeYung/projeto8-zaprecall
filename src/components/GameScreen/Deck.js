@@ -7,19 +7,24 @@ function Card (props) {
         <h2>Pergunta {props.questionOrder}</h2>
       </div>
       <div className="card-question hidden">
-        <h2>Pergunta {props.question}</h2>
+        <h2>{props.question}</h2>
       </div>
       <div className="card-answer hidden">
-        <h2>Pergunta {props.answer}</h2>
+        <h2>{props.answer}</h2>
       </div>
     </div>
     );
 }
 
 export default function Deck(props) {
-    return (
-      <main>
-        {props.deck.qEa.map((pair, index) => <Card key={index} questionOrder={index + 1} question={pair.question} answer={pair.answer} />)}
-      </main>
-    );
+
+  function shuffle () {
+    return Math.random() - 0.5;
+  }
+
+  return (
+    <main>
+      {props.deck.qEa.sort(shuffle).map((pair, index) => <Card key={index} questionOrder={index + 1} question={pair.question} answer={pair.answer} />)}
+    </main>
+  );
 }
