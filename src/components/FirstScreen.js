@@ -34,7 +34,7 @@ export default function FirstScreen (props) {
         <option value="" disabled hidden>Escolha seu deck</option>
         {props.decks.map((bolinha, index) => <DeckOption key={index} order={index + 1} name={bolinha.name} />)}
       </select>
-      <h3>{alertDeck}</h3>
+      <h4>{alertDeck}</h4>
       <input type="number" placeholder="Digite sua meta de zaps..." />
       <input type="submit" value="Iniciar Recall!" onClick={startGame} />
     </section>

@@ -20,12 +20,18 @@ h1 {
   color: #FFFFFF;
 }
 h2 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+}
+h3 {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
   color: #333333;
 }
-h3 {
+h4 {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
@@ -34,7 +40,7 @@ h3 {
   text-align: center;
   color: #FFFFFF;
 }
-h4 {
+h5 {
   font-size: 12px;
   line-height: 14px;
   text-align: center;
@@ -116,7 +122,7 @@ select {
   justify-content: center;
   box-sizing: border-box;
 }
-.first-screen h3 {
+.first-screen h4 {
   height: 18px;
 }
 
@@ -149,9 +155,6 @@ header img {
   border-radius: 5px;
   margin-bottom: 25px;
 }
-.card-question.hidden {
-  display: none;
-}
-.card-answer.hidden {
+.card.hidden {
   display: none;
 }

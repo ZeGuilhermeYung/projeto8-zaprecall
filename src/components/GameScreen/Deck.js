@@ -1,16 +1,27 @@
 import React from "react";
 
+function flipCard () {
+
+}
+
 function Card (props) {
   return (
     <div className="card">
-      <div className="card-front">
-        <h2>Pergunta {props.questionOrder}</h2>
+      <div className="card front">
+        <h3>Pergunta {props.questionOrder}</h3>
       </div>
-      <div className="card-question hidden">
+      <div className="card question hidden">
         <h2>{props.question}</h2>
       </div>
-      <div className="card-answer hidden">
+      <div className="card answer hidden">
         <h2>{props.answer}</h2>
+        <div>
+          <div>
+            <div className="wrong"><h5>Não lembrei</h5></div>
+            <div className="right"><h5>Quase não lembrei</h5></div>
+            <div className="zap"><h5>Zap!</h5></div>
+          </div>
+        </div>
       </div>
     </div>
     );
