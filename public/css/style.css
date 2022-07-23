@@ -160,13 +160,47 @@ header img {
   justify-content: space-between;
   box-sizing: border-box;
 }
-.card.hidden {
-  display: none;
-}
-.card.front {
+.card.front, .card.question img, .recall {
   cursor: pointer;
 }
 .card.front ion-icon {
   color: #333333;
   font-size: 23px;
+}
+.card.question, .card.answer {
+  min-height: 131px;
+  height: auto;
+  padding: 18px 15px 6px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.card h2 {
+  width: 100%;
+  word-break: break-word;
+}
+.card.question img {
+  align-self: flex-end;
+}
+.card.answer > div {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+.recall {
+  width: 85px;
+  height: 37px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrong {
+  background-color: #FF3030;
+}
+.almost {
+  background-color: #FF922E;
+}
+.right {
+  background-color: #2FBE34;
 }
