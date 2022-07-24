@@ -195,12 +195,24 @@ header img {
   align-items: center;
   justify-content: center;
 }
-.wrong {
+.card.front.wrong h3, .card.front.almost h3, .card.front.right h3 {
+  text-decoration-line: line-through;
+}
+.card.answer > div .wrong {
   background-color: #FF3030;
 }
-.almost {
+.card.answer > div .almost {
   background-color: #FF922E;
 }
-.right {
+.card.answer > div .right {
   background-color: #2FBE34;
+}
+.card.front.wrong h3, .card.front .wrong {
+  color: #FF3030;
+}
+.card.front.almost h3, .card.front .almost {
+  color: #FF922E;
+}
+.card.front.right h3, .card.front .right {
+  color: #2FBE34;
 }

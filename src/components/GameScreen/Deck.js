@@ -3,13 +3,21 @@ import React from "react";
 function Card (props) {
 
   const [cardState, setCardState] = React.useState("front");
-  console.log(cardState);
+  const [answered, setAnswered] = React.useState("");
+  const [answerIcon, setAnswerIcon] = React.useState("play-outline");
+
+  function statusAnswer(status, icon) {
+    setAnswered(status);
+    setAnswerIcon(icon);
+    setCardState("front");
+  }
+
   switch (cardState) {
     case "front":
       return (
-        <div className="card front" onClick={() => {setCardState("question")}}>
+        <div className={`card front ${answered}`} onClick={() => {setCardState("question")}}>
           <h3>Pergunta {props.questionOrder}</h3>
-          <ion-icon name="play-outline"></ion-icon>
+          <ion-icon class={answered} name={answerIcon}></ion-icon>
         </div>
     );
     case "question":
@@ -24,16 +32,16 @@ function Card (props) {
         <div className="card answer">
           <h2>{props.answer}</h2>
           <div>
-            <div className="recall wrong"><h5>Não lembrei</h5></div>
-            <div className="recall almost"><h5>Quase não lembrei</h5></div>
-            <div className="recall right"><h5>Zap!</h5></div>
+            <div className="recall wrong" onClick={() => statusAnswer("wrong", "close-circle")}><h5>Não lembrei</h5></div>
+            <div className="recall almost" onClick={() => statusAnswer("almost", "help-circle")}><h5>Quase não lembrei</h5></div>
+            <div className="recall right" onClick={() => statusAnswer("right", "checkmark-circle")}><h5>Zap!</h5></div>
           </div>
         </div>
     );
+    default:
+    break;
   };
 }     
-
-
 
 export default function Deck(props) {
 
