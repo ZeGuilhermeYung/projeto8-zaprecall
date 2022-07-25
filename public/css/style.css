@@ -240,6 +240,32 @@ footer {
   right: 0;
   z-index: 5;
 }
+.result-message {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.first-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+.first-message img {
+  margin-right: 13px;
+}
+.final-message {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.final-message h2 {
+  text-align: center;
+  word-break: break-word;
+}
 .counter {
   width: 100%;
   height: 35px;

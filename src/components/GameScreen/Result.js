@@ -49,7 +49,7 @@ export default function Result (props) {
     if (props.numAnswered === props.totalQuestions && props.rightAnswers >= props.targetRightAnsw) {
       return (
         <footer>
-          <Message emoji="./assets/img/happy-emoji.png" titleMessage="Parabéns!" finalMessage="Você não esqueceu de nenhum flashcard!" />
+          <Message emoji="./assets/img/happy-emoji.png" titleMessage="Parabéns!" finalMessage={`Você não esqueceu de\nnenhum flashcard!`} />
           <Counter classCounter={"counter started"} numAnswered={props.numAnswered} totalQuestions={props.totalQuestions} />
           <IconResults resultIcons={props.resultIcons} />
         </footer>
@@ -57,7 +57,7 @@ export default function Result (props) {
     } else {
       return (
         <footer>
-          <Message emoji="./assets/img/sad-emoji.png" titleMessage="Putz..." finalMessage="Ainda faltam alguns...Mas não desanime!" />
+          <Message emoji="./assets/img/sad-emoji.png" titleMessage="Putz..." finalMessage={`Ainda faltam alguns...\nMas não desanime!`} />
           <Counter classCounter={"counter started"} numAnswered={props.numAnswered} totalQuestions={props.totalQuestions} />
           <IconResults resultIcons={props.resultIcons} />
         </footer>
