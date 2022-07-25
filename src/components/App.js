@@ -117,7 +117,7 @@ export default function App() {
   ];
 
   const [deck, setDeck] = React.useState(initial);
-  const [classFirstScreen, setClassFirstScreen] = React.useState("first-screen");
+  const [selected, setSelected] = React.useState("");
   const [totalQuestions, setTotalQuestions] = React.useState(0);
   const [targetRightAnsw, setTargetRightAnsw] = React.useState("");
   const [gameStarted, setGameStarted] = React.useState(false);
@@ -125,13 +125,13 @@ export default function App() {
   if(!gameStarted) {
     return (
       <div>
-        <FirstScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} gameStarted={gameStarted} setGameStarted={setGameStarted} targetRightAnsw={targetRightAnsw} setTargetRightAnsw={setTargetRightAnsw} />
+        <FirstScreen decks={decks} deck={deck} setDeck={setDeck} selected={selected} setSelected={setSelected} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} gameStarted={gameStarted} setGameStarted={setGameStarted} targetRightAnsw={targetRightAnsw} setTargetRightAnsw={setTargetRightAnsw} />
       </div>
     );
   } else {
     return (
       <div>
-        <GameScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} gameStarted={gameStarted} setGameStarted={setGameStarted} targetRightAnsw={targetRightAnsw} setTargetRightAnsw={setTargetRightAnsw} />
+        <GameScreen decks={decks} deck={deck} setDeck={setDeck} selected={selected} setSelected={setSelected} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} gameStarted={gameStarted} setGameStarted={setGameStarted} targetRightAnsw={targetRightAnsw} setTargetRightAnsw={setTargetRightAnsw} />
       </div>
     );
   }

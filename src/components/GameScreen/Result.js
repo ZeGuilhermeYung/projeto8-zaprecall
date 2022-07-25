@@ -1,5 +1,19 @@
 import React from "react";
 
+function Message (props) {
+  return (
+    <div className="result-message">
+      <div className="first-message">
+        <img src={props.emoji} alt="" />
+        <h2><strong>{props.titleMessage}</strong></h2>
+      </div>
+      <div className="final-message">
+        <h2>{props.finalMessage}</h2>
+      </div>
+    </div>
+  );
+}
+
 function Counter (props) {
   return (
     <div className={props.classCounter}>
@@ -16,16 +30,15 @@ function IconResults (props) {
   );
 }
 
-function Message (props) {
+function RestartButton (props) {
+
+  function restartLevel () {
+    props.setGameStarted(false);
+  }
+
   return (
-    <div className="result-message">
-      <div className="first-message">
-        <img src={props.emoji} alt="" />
-        <h2><strong>{props.titleMessage}</strong></h2>
-      </div>
-      <div className="final-message">
-        <h2>{props.finalMessage}</h2>
-      </div>
+    <div className="restart-button" onClick={restartLevel}>
+      <h4>REINICIAR RECALL</h4>
     </div>
   );
 }
@@ -52,6 +65,7 @@ export default function Result (props) {
           <Message emoji="./assets/img/happy-emoji.png" titleMessage="Parabéns!" finalMessage={`Você não esqueceu de\nnenhum flashcard!`} />
           <Counter classCounter={"counter started"} numAnswered={props.numAnswered} totalQuestions={props.totalQuestions} />
           <IconResults resultIcons={props.resultIcons} />
+          <RestartButton decks={props.decks} deck={props.deck} setDeck={props.setDeck} selected={props.selected} setAnswered={props.setAnswered} setRightAnswers={props.setRightAnswers} setNumAnswered={props.setNumAnswered} setResultIcons={props.setResultIcons} setGameStarted={props.setGameStarted} />
         </footer>
       );
     } else {
@@ -60,9 +74,9 @@ export default function Result (props) {
           <Message emoji="./assets/img/sad-emoji.png" titleMessage="Putz..." finalMessage={`Ainda faltam alguns...\nMas não desanime!`} />
           <Counter classCounter={"counter started"} numAnswered={props.numAnswered} totalQuestions={props.totalQuestions} />
           <IconResults resultIcons={props.resultIcons} />
+          <RestartButton decks={props.decks} deck={props.deck} setDeck={props.setDeck} selected={props.selected} setAnswered={props.setAnswered} setRightAnswers={props.setRightAnswers} setNumAnswered={props.setNumAnswered} setResultIcons={props.setResultIcons} setGameStarted={props.setGameStarted} />
         </footer>
       );
-    }
-    
+    } 
   }
 }

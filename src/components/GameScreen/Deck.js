@@ -9,7 +9,6 @@ function Card (props) {
   const [cardAnswered, setCardAnswered] = React.useState(false);
   const [alertAnsweredCard, setAlertAnsweredCard] = React.useState("");
 
-
   function statusAnswer(status, icon) {
     setAnswered(status);
     setAnswerIcon(icon);
@@ -17,7 +16,6 @@ function Card (props) {
     setCardAnswered(true);
     if (status !== "wrong") {
       props.setRightAnswers(props.rightAnswers + 1);
-      console.log(props.rightAnswers);
     }
     props.setNumAnswered(props.numAnswered + 1);
     props.setResultIcons([...props.resultIcons, <IconAnswered key={props.numAnswered} answered={status} answerIcon={icon} />]);
@@ -59,9 +57,13 @@ function Card (props) {
     default:
     break;
   };
-}    
+}
+  
 
 export default function Deck(props) {
+
+  console.log(props.restartLevel);
+  console.log(props.deck);
 
   return (
     <main>

@@ -286,3 +286,17 @@ footer {
   align-items: center;
   justify-content: center;
 }
+.restart-button {
+  width: 167px;
+  height: 32px;
+  background-color: #FB6B6B;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 17px 0 21px 0;
+}
+.restart-button h4 {
+  text-align: center;
+}
