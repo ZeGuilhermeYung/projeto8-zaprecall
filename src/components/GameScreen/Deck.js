@@ -6,20 +6,31 @@ function Card (props) {
   const [cardState, setCardState] = React.useState("front");
   const [answered, setAnswered] = React.useState("");
   const [answerIcon, setAnswerIcon] = React.useState("play-outline");
+  const [cardAnswered, setCardAnswered] = React.useState(false);
+  const [alertAnsweredCard, setAlertAnsweredCard] = React.useState("");
+
 
   function statusAnswer(status, icon) {
     setAnswered(status);
     setAnswerIcon(icon);
     setCardState("front");
+    setCardAnswered(true);
     props.setNumAnswered(props.numAnswered + 1);
     props.setResultIcons([...props.resultIcons, <IconAnswered key={props.numAnswered} answered={status} answerIcon={icon} />]);
+  }
+
+  function alertAnswered() {
+    setAlertAnsweredCard("O cartão já foi respondido!");
+    setTimeout(() => {
+      setAlertAnsweredCard("");
+    }, 800);
   }
 
   switch (cardState) {
     case "front":
       return (
-        <div className={`card front ${answered}`} onClick={() => {setCardState("question")}}>
-          <h3>Pergunta {props.questionOrder}</h3>
+        <div className={`card front ${answered}`} onClick={cardAnswered === false ? () => {setCardState("question")} : () => {alertAnswered()}}>
+          <div><h3>Pergunta {props.questionOrder}</h3><h5>{alertAnsweredCard}</h5></div>
           <IconAnswered answered={answered} answerIcon={answerIcon} />
         </div>
       );

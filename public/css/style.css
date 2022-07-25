@@ -166,6 +166,9 @@ main {
   color: #333333;
   font-size: 23px;
 }
+.card.front h5 {
+  color: #333333;
+}
 .card.question, .card.answer {
   min-height: 131px;
   height: auto;
