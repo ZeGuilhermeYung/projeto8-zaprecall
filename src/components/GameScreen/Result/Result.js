@@ -1,6 +1,7 @@
+import "./style.css";
 import React from "react";
-import happyEmoji from "../../assets/img/happy-emoji.png";
-import sadEmoji from "../../assets/img/sad-emoji.png";
+import happyEmoji from "../../../assets/img/happy-emoji.png";
+import sadEmoji from "../../../assets/img/sad-emoji.png";
 
 function Message (props) {
   return (

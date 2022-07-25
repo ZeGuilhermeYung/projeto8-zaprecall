@@ -1,0 +1,54 @@
+body {
+  width: 100%;
+  font-family: 'Recursive', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #FB6B6B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.root, .root > div {
+  width: 100%;
+}
+
+/*////////// Fonts //////////////// */
+
+h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: -0.012em;
+  color: #FFFFFF;
+}
+h2 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+}
+h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+h4 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+h5 {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #FFFFFF;
+}
+strong {
+  font-weight: 700;
+}

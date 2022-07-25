@@ -1,8 +1,9 @@
+import "./style.css";
 import React from "react";
-import Deck from "./GameScreen/Deck";
-import IconAnswered from "./GameScreen/IconsAnswered";
-import Header from "./GameScreen/Header";
-import Result from "./GameScreen/Result";
+import Deck from "./Deck/Deck";
+import IconAnswered from "./IconsAnswered";
+import Header from "./Header/Header";
+import Result from "./Result/Result";
 
 export default function GameScreen (props) {
 

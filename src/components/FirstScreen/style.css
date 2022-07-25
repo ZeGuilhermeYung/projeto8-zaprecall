@@ -1,0 +1,65 @@
+.first-screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #FB6B6B;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.first-screen img {
+  width: 136px;
+  height: 161px;
+  margin-bottom: 21px;
+}
+input {
+  all: unset;
+}
+select, input[type=number], ::placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FB6B6B;
+  opacity: 0.9;
+  padding-left: 11px;
+}
+select, input[type=number], option {
+  width: 246px;
+  height: 43px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+select {
+  margin-top: 34px;
+}
+::placeholder, select:invalid {
+  color: #ADADAD;
+}
+.first-screen input[type=number]:focus-visible, select:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+  outline-color: #ADADAD;
+  outline-style: auto;
+  outline-width: 1px;
+}
+.first-screen input[type=submit] {
+  width: 246px;
+  height: 54px;
+  color: #D70900;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  background-color: #FFFFFF;
+  border: 1px solid #D70900;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.first-screen h4 {
+  height: 18px;
+}

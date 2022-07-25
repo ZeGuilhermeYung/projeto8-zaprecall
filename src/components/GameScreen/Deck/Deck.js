@@ -1,6 +1,7 @@
+import "./style.css";
 import React from "react";
-import IconAnswered from "./IconsAnswered";
-import turnArrow from "../../assets/img/turn-arrow.png";
+import IconAnswered from "../IconsAnswered";
+import turnArrow from "../../../assets/img/turn-arrow.png";
 
 function Card (props) {
 

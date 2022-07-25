@@ -1,0 +1,80 @@
+main {
+  margin-bottom: 70px;
+}
+.card {
+  width: 300px;
+  height: 65px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  padding: 0 15px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.card.front, .card.question img, .recall {
+  cursor: pointer;
+}
+.icons-answered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card.front ion-icon, .icons-answered {
+  color: #333333;
+  font-size: 23px;
+}
+.card.front h5 {
+  color: #333333;
+}
+.card.question, .card.answer {
+  min-height: 131px;
+  height: auto;
+  padding: 18px 15px 6px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.card h2 {
+  width: 100%;
+  word-break: break-word;
+}
+.card.question img {
+  align-self: flex-end;
+}
+.card.answer > div {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+.recall {
+  width: 85px;
+  height: 37px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card.front.wrong h3, .card.front.almost h3, .card.front.right h3 {
+  text-decoration-line: line-through;
+}
+.card.answer > div .wrong {
+  background-color: #FF3030;
+}
+.card.answer > div .almost {
+  background-color: #FF922E;
+}
+.card.answer > div .right {
+  background-color: #2FBE34;
+}
+.card.front.wrong h3, .card.front .wrong, .icons-answered .wrong {
+  color: #FF3030;
+}
+.card.front.almost h3, .card.front .almost, .icons-answered .almost {
+  color: #FF922E;
+}
+.card.front.right h3, .card.front .right, .icons-answered .right {
+  color: #2FBE34;
+}

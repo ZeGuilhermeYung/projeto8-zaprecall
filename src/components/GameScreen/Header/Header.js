@@ -1,4 +1,5 @@
-import logoZaprecall from "../../assets/img/logo-zaprecall.png";
+import "./style.css";
+import logoZaprecall from "../../../assets/img/logo-zaprecall.png";
 
 export default function Header() {
   return (

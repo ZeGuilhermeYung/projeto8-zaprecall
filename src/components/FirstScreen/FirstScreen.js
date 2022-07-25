@@ -1,5 +1,6 @@
 import React from "react";
-import logoZaprecall from "../assets/img/logo-zaprecall.png";
+import logoZaprecall from "../../assets/img/logo-zaprecall.png";
+import "./style.css";
 
 function DeckOption (props) {
   return (
