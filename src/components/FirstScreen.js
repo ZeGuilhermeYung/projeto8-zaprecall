@@ -16,11 +16,15 @@ export default function FirstScreen (props) {
     setAlertDeck("");
   };
 
+  function shuffle () {
+    return Math.random() - 0.5;
+  }
+
   function startGame() {
     if (selected !== "") {
-      props.setDeck(props.decks[selected]);
+      props.setDeck(props.decks[selected].qEa.sort(shuffle));
       props.setClassFirstScreen("first-screen hidden");
-      props.setTotalQuestions(props.deck.qEa.length);
+      props.setTotalQuestions(props.deck.length);
     } else {
       setAlertDeck("Precisa escolher um deck!");
     }

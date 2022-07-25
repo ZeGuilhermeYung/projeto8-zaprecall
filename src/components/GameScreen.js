@@ -8,7 +8,6 @@ export default function GameScreen(props) {
 
   const [resultIcons, setResultIcons] = React.useState([]);
   const [numAnswered, setNumAnswered] = React.useState(0);
-  console.log(resultIcons.length);
 
   return (
     <section className="game-screen">

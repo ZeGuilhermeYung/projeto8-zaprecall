@@ -48,13 +48,9 @@ function Card (props) {
 
 export default function Deck(props) {
 
-  function shuffle () {
-    return Math.random() - 0.5;
-  }
-
   return (
     <main>
-      {props.deck.qEa.sort(shuffle).map((pairQeA, index) => <Card cardState={props.cardState} setCardState={props.setCardState} key={index} questionOrder={index + 1} question={pairQeA.question} answer={pairQeA.answer} resultIcons={props.resultIcons} setResultIcons={props.setResultIcons} numAnswered={props.numAnswered} setNumAnswered={props.setNumAnswered} />)}
+      {props.deck.map((pairQeA, index) => <Card cardState={props.cardState} setCardState={props.setCardState} key={index} questionOrder={index + 1} question={pairQeA.question} answer={pairQeA.answer} resultIcons={props.resultIcons} setResultIcons={props.setResultIcons} numAnswered={props.numAnswered} setNumAnswered={props.setNumAnswered} />)}
     </main>
   );
 }

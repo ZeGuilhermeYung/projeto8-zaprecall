@@ -4,43 +4,40 @@ import GameScreen from "./GameScreen.js";
 
 export default function App() {
 
-  const initial = {
-    name:"Princípios de React",
-    qEa: [
-      {
-        question:"O que é JSX?",
-        answer:"Uma extensão de linguagem do JavaScript"
-      },
-      {
-        question:"O React é ____________",
-        answer:"uma biblioteca JavaScript para construção de interfaces"
-      },
-      {
-        question:"Componentes devem iniciar com _____________",
-        answer:"letra maiúscula"
-      },
-      {
-        question:"Podemos colocar ________________ dentro do JSX",
-        answer:"expressões"
-      },
-      {
-        question:"O ReactDOM nos ajuda ________________",
-        answer:"interagindo com a DOM para colocar componentes React na mesma"
-      },
-      {
-        question:"Usamos o npm para ____________________",
-        answer:"gerenciar os pacotes necessários e suas dependências"
-      },
-      {
-        question:"Usamos props para ____________________",
-        answer:"passar diferentes informações para componentes"
-      },
-      {
-        question:"Usamos estado (state) para ______________________",
-        answer:"dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"
-      }       
-    ]
-  };
+  const initial = [
+    {
+      question:"O que é JSX?",
+      answer:"Uma extensão de linguagem do JavaScript"
+    },
+    {
+      question:"O React é ____________",
+      answer:"uma biblioteca JavaScript para construção de interfaces"
+    },
+    {
+      question:"Componentes devem iniciar com _____________",
+      answer:"letra maiúscula"
+    },
+    {
+      question:"Podemos colocar ________________ dentro do JSX",
+      answer:"expressões"
+    },
+    {
+      question:"O ReactDOM nos ajuda ________________",
+      answer:"interagindo com a DOM para colocar componentes React na mesma"
+    },
+    {
+      question:"Usamos o npm para ____________________",
+      answer:"gerenciar os pacotes necessários e suas dependências"
+    },
+    {
+      question:"Usamos props para ____________________",
+      answer:"passar diferentes informações para componentes"
+    },
+    {
+      question:"Usamos estado (state) para ______________________",
+      answer:"dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"
+    }       
+  ];
 
   const decks = [
     {

@@ -150,6 +150,9 @@ header img {
   height: 60px;
   margin-right: 20px;
 }
+main {
+  margin-bottom: 70px;
+}
 .card {
   width: 300px;
   height: 65px;
@@ -232,6 +235,10 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
 }
 .counter {
   width: 100%;
