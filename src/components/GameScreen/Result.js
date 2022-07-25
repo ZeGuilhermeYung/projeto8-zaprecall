@@ -1,23 +1,33 @@
 import React from "react";
 
-export default function Result(props) {
+function Counter (props) {
+  return(
+    <div className={props.classCounter}>
+      <h2>{`${props.numAnswered}/${props.totalQuestions} CONCLUÍDOS`}</h2>
+    </div>
+  );
+}
+
+function IconResults (props) {
+  return(
+    <div className="icons-results">
+      {props.resultIcons}
+    </div>
+  );
+}
+
+export default function Result (props) {
   if(props.resultIcons.length === 0) {
     return (
       <footer>
-        <div className="counter">
-          <h2>{`${props.numAnswered}/${props.totalQuestions} CONCLUÍDOS`}</h2>
-        </div>
+        <Counter classCounter={"counter"} numAnswered={props.numAnswered} totalQuestions={props.totalQuestions} />
       </footer>
     );
   } else {
     return (
       <footer>
-        <div className="counter started">
-          <h2>{`${props.numAnswered}/${props.totalQuestions} CONCLUÍDOS`}</h2>
-        </div>
-        <div className="icons-results">
-          {props.resultIcons}
-        </div>
+        <Counter classCounter={"counter started"} numAnswered={props.numAnswered} totalQuestions={props.totalQuestions} />
+        <IconResults resultIcons={props.resultIcons} />
       </footer>
     );
   }

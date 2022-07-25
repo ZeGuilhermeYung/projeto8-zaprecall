@@ -109,7 +109,7 @@ export default function App() {
           answer:"Duas vezes, em 1994 (Brasil x Itália) e em 2006 (Itália x França)"
         },
         {
-          question:"Como é nomeado, em espanhol, o famos gol com a mão marcado por Diego Armando Maradona contra a Inglaterra?",
+          question:"Como é nomeado, em espanhol, o famoso gol com a mão marcado por Diego Armando Maradona contra a Inglaterra?",
           answer:"La mano de Dios"
         }       
       ]
@@ -119,18 +119,19 @@ export default function App() {
   const [deck, setDeck] = React.useState(initial);
   const [classFirstScreen, setClassFirstScreen] = React.useState("first-screen");
   const [totalQuestions, setTotalQuestions] = React.useState(0);
+  const [targetQuestions, setTargetQuestions] = React.useState(0);
   const [gameStarted, setGameStarted] = React.useState(false);
 
   if(!gameStarted) {
     return (
       <div>
-        <FirstScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} gameStarted={gameStarted} setGameStarted={setGameStarted} />
+        <FirstScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} gameStarted={gameStarted} setGameStarted={setGameStarted} targetQuestions={targetQuestions} setTargetQuestions={setTargetQuestions} />
       </div>
     );
   } else {
     return (
       <div>
-        <GameScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} gameStarted={gameStarted} setGameStarted={setGameStarted} />
+        <GameScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} gameStarted={gameStarted} setGameStarted={setGameStarted} setTargetQuestions={setTargetQuestions} />
       </div>
     );
   }

@@ -15,6 +15,9 @@ function Card (props) {
     setAnswerIcon(icon);
     setCardState("front");
     setCardAnswered(true);
+    if (status !== "wrong") {
+      props.setRightAnswers(props.rightAnswers + 1);
+    }
     props.setNumAnswered(props.numAnswered + 1);
     props.setResultIcons([...props.resultIcons, <IconAnswered key={props.numAnswered} answered={status} answerIcon={icon} />]);
   }
@@ -61,7 +64,7 @@ export default function Deck(props) {
 
   return (
     <main>
-      {props.deck.map((pairQeA, index) => <Card cardState={props.cardState} setCardState={props.setCardState} key={index} questionOrder={index + 1} question={pairQeA.question} answer={pairQeA.answer} resultIcons={props.resultIcons} setResultIcons={props.setResultIcons} numAnswered={props.numAnswered} setNumAnswered={props.setNumAnswered} />)}
+      {props.deck.map((pairQeA, index) => <Card cardState={props.cardState} setCardState={props.setCardState} key={index} questionOrder={index + 1} question={pairQeA.question} answer={pairQeA.answer} resultIcons={props.resultIcons} setResultIcons={props.setResultIcons} numAnswered={props.numAnswered} setNumAnswered={props.setNumAnswered} rightAnswers={props.rightAnswers} setRightAnswers={props.setRightAnswers} />)}
     </main>
   );
 }
