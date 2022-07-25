@@ -24,7 +24,7 @@ export default function FirstScreen (props) {
   
   const handleBlurTarget = event => {
     setTargetNum(event.target.value);
-    (targetNum < 1) ? setAlertTarget("A meta tem que ser pelo menos 1!") : setAlertTarget("");
+    (targetNum < 1 && targetNum !== "") ? setAlertTarget("A meta tem que ser pelo menos 1!") : setAlertTarget("");
   };
 
   function shuffle () {
@@ -36,7 +36,7 @@ export default function FirstScreen (props) {
       props.setDeck(props.decks[selected].qEa.sort(shuffle));
       props.setClassFirstScreen("first-screen hidden");
       props.setTotalQuestions(props.deck.length);
-      props.setGameStarted(true);
+      (targetNum > props.totalQuestions) ? setAlertTarget(`Há somente ${props.deck.length} perguntas`) : (targetNum < 1 && targetNum !== "") ? setAlertTarget("A meta tem que ser pelo menos 1!") : props.setGameStarted(true);
     } else {
       setAlertDeck("Precisa escolher um deck!");
     }
@@ -46,7 +46,7 @@ export default function FirstScreen (props) {
     <section className={props.classFirstScreen}>
       <img src="./assets/img/logo-zaprecall.png" alt="imagem de um raio amarelo com contornos vermelhos" />
       <h1>ZapRecall</h1>
-      <select name="decks" onChange={handleChangeDeck} required>
+      <select name="decks" defaultValue="" onChange={handleChangeDeck} required>
         <option value="" disabled hidden>Escolha seu deck</option>
         {props.decks.map((deck, index) => <DeckOption key={index} order={index + 1} name={deck.name} />)}
       </select>
