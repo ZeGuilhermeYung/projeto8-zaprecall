@@ -64,8 +64,8 @@ function Card (props) {
 
 export default function Deck(props) {
 
-  console.log(props.restartLevel);
   console.log(props.deck);
+  console.log(props.targetRightAnsw);
 
   return (
     <main>

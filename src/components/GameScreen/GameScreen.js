@@ -14,10 +14,10 @@ export default function GameScreen (props) {
   return (
     <section className="game-screen">
       <Header />
-      <Deck decks={props.decks} deck={props.deck} setDeck={props.setDeck} selected={props.selected} resultIcons={resultIcons} setResultIcons={setResultIcons} numAnswered={numAnswered} setNumAnswered={setNumAnswered} rightAnswers={rightAnswers} setRightAnswers={setRightAnswers} >
+      <Deck decks={props.decks} deck={props.deck} setDeck={props.setDeck} resultIcons={resultIcons} setResultIcons={setResultIcons} numAnswered={numAnswered} setNumAnswered={setNumAnswered} rightAnswers={rightAnswers} setRightAnswers={setRightAnswers} targetRightAnsw={props.targetRightAnsw} >
         <IconAnswered resultIcons={resultIcons} setResultIcons={setResultIcons} />
       </Deck>
-      <Result decks={props.decks} deck={props.deck} setDeck={props.setDeck} selected={props.selected} totalQuestions={props.totalQuestions} setTotalQuestions={props.setTotalQuestions} numAnswered={numAnswered} setNumAnswered={setNumAnswered} resultIcons={resultIcons} setResultIcons={setResultIcons} rightAnswers={rightAnswers} setRightAnswers={setRightAnswers} targetRightAnsw={props.targetRightAnsw} gameStarted={props.gameStarted} setGameStarted={props.setGameStarted} >
+      <Result decks={props.decks} deck={props.deck} setDeck={props.setDeck} totalQuestions={props.totalQuestions} setTotalQuestions={props.setTotalQuestions} numAnswered={numAnswered} setNumAnswered={setNumAnswered} resultIcons={resultIcons} setResultIcons={setResultIcons} rightAnswers={rightAnswers} setRightAnswers={setRightAnswers} targetRightAnsw={props.targetRightAnsw} gameStarted={props.gameStarted} setGameStarted={props.setGameStarted} >
         <IconAnswered resultIcons={resultIcons} setResultIcons={setResultIcons} />
       </Result>
     </section>

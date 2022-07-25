@@ -68,7 +68,7 @@ export default function Result (props) {
           <Message emoji={happyEmoji} titleMessage="Parabéns!" finalMessage={`Você não esqueceu de\nnenhum flashcard!`} />
           <Counter classCounter={"counter started"} numAnswered={props.numAnswered} totalQuestions={props.totalQuestions} />
           <IconResults resultIcons={props.resultIcons} />
-          <RestartButton decks={props.decks} deck={props.deck} setDeck={props.setDeck} selected={props.selected} setAnswered={props.setAnswered} setRightAnswers={props.setRightAnswers} setNumAnswered={props.setNumAnswered} setResultIcons={props.setResultIcons} setGameStarted={props.setGameStarted} />
+          <RestartButton decks={props.decks} deck={props.deck} setDeck={props.setDeck} setAnswered={props.setAnswered} setRightAnswers={props.setRightAnswers} setNumAnswered={props.setNumAnswered} setResultIcons={props.setResultIcons} setGameStarted={props.setGameStarted} />
         </footer>
       );
     } else {
@@ -77,7 +77,7 @@ export default function Result (props) {
           <Message emoji={sadEmoji} titleMessage="Putz..." finalMessage={`Ainda faltam alguns...\nMas não desanime!`} />
           <Counter classCounter={"counter started"} numAnswered={props.numAnswered} totalQuestions={props.totalQuestions} />
           <IconResults resultIcons={props.resultIcons} />
-          <RestartButton decks={props.decks} deck={props.deck} setDeck={props.setDeck} selected={props.selected} setAnswered={props.setAnswered} setRightAnswers={props.setRightAnswers} setNumAnswered={props.setNumAnswered} setResultIcons={props.setResultIcons} setGameStarted={props.setGameStarted} />
+          <RestartButton decks={props.decks} deck={props.deck} setDeck={props.setDeck} setAnswered={props.setAnswered} setRightAnswers={props.setRightAnswers} setNumAnswered={props.setNumAnswered} setResultIcons={props.setResultIcons} setGameStarted={props.setGameStarted} />
         </footer>
       );
     } 

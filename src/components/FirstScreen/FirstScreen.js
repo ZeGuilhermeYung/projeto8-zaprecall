@@ -11,10 +11,11 @@ function DeckOption (props) {
 export default function FirstScreen (props) {
 
   const [alertDeck, setAlertDeck] = React.useState("");
+  const [selected, setSelected] = React.useState("");
   const [alertTarget, setAlertTarget] = React.useState("");
 
   const handleChangeDeck = event => {
-    props.setSelected(event.target.value);
+    setSelected(event.target.value);
     setAlertDeck("");
   };
 
@@ -28,13 +29,13 @@ export default function FirstScreen (props) {
   };
 
   function startGame() {
-    if (props.selected !== "") {
-      props.setDeck(props.decks[props.selected].qEa.sort(() => Math.random() - 0.5));
-      props.setTotalQuestions(props.deck.length);
+    if (selected !== "") {
+      props.setDeck(props.decks[selected].qEa.sort(() => Math.random() - 0.5));
+      props.setTotalQuestions(props.decks[selected].qEa.length);
       if (props.targetRightAnsw === "") {
-        props.setTargetRightAnsw(props.deck.length);
+        props.setTargetRightAnsw(props.decks[selected].qEa.length);
       }
-      (props.targetRightAnsw > props.deck.length) ? setAlertTarget(`Há somente ${props.deck.length} perguntas`) : (props.targetRightAnsw < 1 && props.targetRightAnsw !== "") ? setAlertTarget("A meta tem que ser pelo menos 1!") : props.setGameStarted(true);
+      (props.targetRightAnsw > props.decks[selected].qEa.length) ? setAlertTarget(`Há somente ${props.decks[selected].qEa.length} perguntas`) : (props.targetRightAnsw < 1 && props.targetRightAnsw !== "") ? setAlertTarget("A meta tem que ser pelo menos 1!") : props.setGameStarted(true);
     } else {
       setAlertDeck("Precisa escolher um deck!");
     }
