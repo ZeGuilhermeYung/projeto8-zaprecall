@@ -25,6 +25,7 @@ export default function FirstScreen (props) {
       props.setDeck(props.decks[selected].qEa.sort(shuffle));
       props.setClassFirstScreen("first-screen hidden");
       props.setTotalQuestions(props.deck.length);
+      props.setGameStarted(true);
     } else {
       setAlertDeck("Precisa escolher um deck!");
     }

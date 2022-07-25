@@ -119,11 +119,20 @@ export default function App() {
   const [deck, setDeck] = React.useState(initial);
   const [classFirstScreen, setClassFirstScreen] = React.useState("first-screen");
   const [totalQuestions, setTotalQuestions] = React.useState(0);
+  const [gameStarted, setGameStarted] = React.useState(false);
 
-  return (
-    <div>
-      <FirstScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} />
-      <GameScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} />
-    </div>
-  );
+  if(!gameStarted) {
+    return (
+      <div>
+        <FirstScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} gameStarted={gameStarted} setGameStarted={setGameStarted} />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <GameScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} gameStarted={gameStarted} setGameStarted={setGameStarted} />
+      </div>
+    );
+  }
+  
 }
