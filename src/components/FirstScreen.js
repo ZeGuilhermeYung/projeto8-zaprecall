@@ -20,6 +20,7 @@ export default function FirstScreen (props) {
     if (selected !== "") {
       props.setDeck(props.decks[selected]);
       props.setClassFirstScreen("first-screen hidden");
+      props.setTotalQuestions(props.deck.qEa.length);
     } else {
       setAlertDeck("Precisa escolher um deck!");
     }

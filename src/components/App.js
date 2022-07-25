@@ -1,6 +1,6 @@
+import React from "react";
 import FirstScreen from "./FirstScreen.js";
 import GameScreen from "./GameScreen.js";
-import React from "react";
 
 export default function App() {
 
@@ -121,11 +121,12 @@ export default function App() {
 
   const [deck, setDeck] = React.useState(initial);
   const [classFirstScreen, setClassFirstScreen] = React.useState("first-screen");
+  const [totalQuestions, setTotalQuestions] = React.useState(0);
 
   return (
     <div>
-      <FirstScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} />
-      <GameScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} />
+      <FirstScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} />
+      <GameScreen classFirstScreen={classFirstScreen} setClassFirstScreen={setClassFirstScreen} decks={decks} deck={deck} setDeck={setDeck} totalQuestions={totalQuestions} setTotalQuestions={setTotalQuestions} />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import IconAnswered from "./IconsAnswered";
 
 function Card (props) {
 
@@ -10,6 +11,8 @@ function Card (props) {
     setAnswered(status);
     setAnswerIcon(icon);
     setCardState("front");
+    props.setNumAnswered(props.numAnswered + 1);
+    props.setResultIcons([...props.resultIcons, <IconAnswered key={props.numAnswered} answered={status} answerIcon={icon} />]);
   }
 
   switch (cardState) {
@@ -17,9 +20,9 @@ function Card (props) {
       return (
         <div className={`card front ${answered}`} onClick={() => {setCardState("question")}}>
           <h3>Pergunta {props.questionOrder}</h3>
-          <ion-icon class={answered} name={answerIcon}></ion-icon>
+          <IconAnswered answered={answered} answerIcon={answerIcon} />
         </div>
-    );
+      );
     case "question":
       return (
         <div className="card question">
@@ -37,11 +40,11 @@ function Card (props) {
             <div className="recall right" onClick={() => statusAnswer("right", "checkmark-circle")}><h5>Zap!</h5></div>
           </div>
         </div>
-    );
+      );
     default:
     break;
   };
-}     
+}    
 
 export default function Deck(props) {
 
@@ -51,7 +54,7 @@ export default function Deck(props) {
 
   return (
     <main>
-      {props.deck.qEa.sort(shuffle).map((pairQeA, index) => <Card cardState={props.cardState}  setCardState={props.setCardState} key={index} questionOrder={index + 1} question={pairQeA.question} answer={pairQeA.answer} />)}
+      {props.deck.qEa.sort(shuffle).map((pairQeA, index) => <Card cardState={props.cardState} setCardState={props.setCardState} key={index} questionOrder={index + 1} question={pairQeA.question} answer={pairQeA.answer} resultIcons={props.resultIcons} setResultIcons={props.setResultIcons} numAnswered={props.numAnswered} setNumAnswered={props.setNumAnswered} />)}
     </main>
   );
 }
