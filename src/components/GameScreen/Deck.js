@@ -17,6 +17,7 @@ function Card (props) {
     setCardAnswered(true);
     if (status !== "wrong") {
       props.setRightAnswers(props.rightAnswers + 1);
+      console.log(props.rightAnswers);
     }
     props.setNumAnswered(props.numAnswered + 1);
     props.setResultIcons([...props.resultIcons, <IconAnswered key={props.numAnswered} answered={status} answerIcon={icon} />]);

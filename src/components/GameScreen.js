@@ -16,7 +16,7 @@ export default function GameScreen(props) {
       <Deck decks={props.decks} deck={props.deck} setDeck={props.setDeck} resultIcons={resultIcons} setResultIcons={setResultIcons} numAnswered={numAnswered} setNumAnswered={setNumAnswered} rightAnswers={rightAnswers} setRightAnswers={setRightAnswers} >
         <IconAnswered resultIcons={resultIcons} setResultIcons={setResultIcons} />
       </Deck>
-      <Result totalQuestions={props.totalQuestions} setTotalQuestions={props.setTotalQuestions} numAnswered={numAnswered} setNumAnswered={setNumAnswered} resultIcons={resultIcons} setResultIcons={setResultIcons} rightAnswers={rightAnswers} setRightAnswers={setRightAnswers} >
+      <Result deck={props.deck} totalQuestions={props.totalQuestions} setTotalQuestions={props.setTotalQuestions} numAnswered={numAnswered} setNumAnswered={setNumAnswered} resultIcons={resultIcons} setResultIcons={setResultIcons} rightAnswers={rightAnswers} setRightAnswers={setRightAnswers} targetRightAnsw={props.targetRightAnsw} >
         <IconAnswered resultIcons={resultIcons} setResultIcons={setResultIcons} />
       </Result>
     </section>
