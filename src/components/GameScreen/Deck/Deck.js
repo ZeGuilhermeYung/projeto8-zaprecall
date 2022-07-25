@@ -63,10 +63,6 @@ function Card (props) {
   
 
 export default function Deck(props) {
-
-  console.log(props.deck);
-  console.log(props.targetRightAnsw);
-
   return (
     <main>
       {props.deck.map((pairQeA, index) => <Card cardState={props.cardState} setCardState={props.setCardState} key={index} questionOrder={index + 1} question={pairQeA.question} answer={pairQeA.answer} resultIcons={props.resultIcons} setResultIcons={props.setResultIcons} numAnswered={props.numAnswered} setNumAnswered={props.setNumAnswered} rightAnswers={props.rightAnswers} setRightAnswers={props.setRightAnswers} />)}

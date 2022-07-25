@@ -8,8 +8,8 @@
   justify-content: center;
 }
 .first-screen img {
-  width: 136px;
-  height: 161px;
+  width: 227px;
+  height: 269px;
   margin-bottom: 21px;
 }
 input {
@@ -62,4 +62,12 @@ select {
 }
 .first-screen h4 {
   height: 18px;
+}
+
+@media (max-width: 614px) {
+  .first-screen img {
+    width: 136px;
+    height: 161px;
+    margin-bottom: 21px;
+  }
 }
