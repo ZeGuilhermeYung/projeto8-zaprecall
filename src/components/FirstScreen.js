@@ -1,4 +1,5 @@
 import React from "react";
+import logoZaprecall from "../assets/img/logo-zaprecall.png";
 
 function DeckOption (props) {
   return (
@@ -40,7 +41,7 @@ export default function FirstScreen (props) {
 
   return (
     <section className="first-screen">
-      <img src="./assets/img/logo-zaprecall.png" alt="imagem de um raio amarelo com contornos vermelhos" />
+      <img src={logoZaprecall} alt="imagem de um raio amarelo com contornos vermelhos" />
       <h1>ZapRecall</h1>
       <select name="decks" defaultValue="" onChange={handleChangeDeck} required>
         <option value="" disabled hidden>Escolha seu deck</option>

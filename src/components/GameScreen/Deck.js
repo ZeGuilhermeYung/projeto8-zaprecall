@@ -1,5 +1,6 @@
 import React from "react";
 import IconAnswered from "./IconsAnswered";
+import turnArrow from "../../assets/img/turn-arrow.png";
 
 function Card (props) {
 
@@ -40,7 +41,7 @@ function Card (props) {
       return (
         <div className="card question">
           <h2>{props.question}</h2>
-          <img src="./assets/img/turn-arrow.png" alt="virar para a resposta" onClick={() => {setCardState("answer")}} />
+          <img src={turnArrow} alt="virar para a resposta" onClick={() => {setCardState("answer")}} />
         </div>
       );
     case "answer":

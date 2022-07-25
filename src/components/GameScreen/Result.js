@@ -1,4 +1,6 @@
 import React from "react";
+import happyEmoji from "../../assets/img/happy-emoji.png";
+import sadEmoji from "../../assets/img/sad-emoji.png";
 
 function Message (props) {
   return (
@@ -62,7 +64,7 @@ export default function Result (props) {
     if (props.numAnswered === props.totalQuestions && props.rightAnswers >= props.targetRightAnsw) {
       return (
         <footer>
-          <Message emoji="./assets/img/happy-emoji.png" titleMessage="Parabéns!" finalMessage={`Você não esqueceu de\nnenhum flashcard!`} />
+          <Message emoji={happyEmoji} titleMessage="Parabéns!" finalMessage={`Você não esqueceu de\nnenhum flashcard!`} />
           <Counter classCounter={"counter started"} numAnswered={props.numAnswered} totalQuestions={props.totalQuestions} />
           <IconResults resultIcons={props.resultIcons} />
           <RestartButton decks={props.decks} deck={props.deck} setDeck={props.setDeck} selected={props.selected} setAnswered={props.setAnswered} setRightAnswers={props.setRightAnswers} setNumAnswered={props.setNumAnswered} setResultIcons={props.setResultIcons} setGameStarted={props.setGameStarted} />
@@ -71,7 +73,7 @@ export default function Result (props) {
     } else {
       return (
         <footer>
-          <Message emoji="./assets/img/sad-emoji.png" titleMessage="Putz..." finalMessage={`Ainda faltam alguns...\nMas não desanime!`} />
+          <Message emoji={sadEmoji} titleMessage="Putz..." finalMessage={`Ainda faltam alguns...\nMas não desanime!`} />
           <Counter classCounter={"counter started"} numAnswered={props.numAnswered} totalQuestions={props.totalQuestions} />
           <IconResults resultIcons={props.resultIcons} />
           <RestartButton decks={props.decks} deck={props.deck} setDeck={props.setDeck} selected={props.selected} setAnswered={props.setAnswered} setRightAnswers={props.setRightAnswers} setNumAnswered={props.setNumAnswered} setResultIcons={props.setResultIcons} setGameStarted={props.setGameStarted} />

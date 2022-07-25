@@ -1,6 +1,9 @@
 import React from "react";
 import FirstScreen from "./FirstScreen.js";
 import GameScreen from "./GameScreen.js";
+import "../assets/css/reset.css";
+import "../assets/css/style.css";
+import "../assets/img/zap-favicon.ico";
 
 export default function App() {
 
